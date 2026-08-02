@@ -24,15 +24,28 @@
 
 <h1 class="logo">THE FACE DOCTRESS</h1>
 
+<!-- Mobile Menu Button -->
+<button class="menu-toggle" aria-label="Open menu">
+    ☰
+</button>
 
-<ul>
+
+<ul class="nav-links">
+
 <li><a href="#home">Home</a></li>
+
 <li><a href="#services">Services</a></li>
+
 <li><a href="#gallery">Gallery</a></li>
+
 <li><a href="#hours">Availability</a></li>
+
 <li><a href="#booking">Booking</a></li>
+
 <li><a href="#policies">Policies</a></li>
+
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 
@@ -153,9 +166,13 @@ BOOK NOW
 <img src="page-4.jpg" alt="Beauty Service">
 
 <img src="page-5.jpg" alt="Beauty Service">
+
 <img src="page-6.jpg" alt="Beauty Service">
+
 <img src="page-9.jpg" alt="Beauty Service">
+
 <img src="page-10.jpg" alt="Beauty Service">
+
 
 </div>
 
@@ -176,11 +193,17 @@ BOOK NOW
     <div class="hours-box">
 
         <p>Monday – 9AM–3PM</p>
+
         <p>Tuesday – 9AM–6PM</p>
+
         <p>Wednesday – 9AM–6PM</p>
+
         <p>Thursday – 9AM–6PM</p>
+
         <p>Friday – 9AM–6PM</p>
+
         <p>Saturday – 1PM–6PM</p>
+
         <p>Sunday – 1PM–6PM</p>
 
     </div>
@@ -234,6 +257,10 @@ BOOK NOW
 
 
 </section>
+
+
+
+
 
 <section class="policies" id="policies">
 
@@ -294,8 +321,8 @@ blisters, or sores in areas being serviced.
 <h3>Payments</h3>
 
 <p>
-The remaining balance is due at the time of your service. 
-    We currently accept Cash, Cash App, Zelle, or payment through Square.
+The remaining balance is due at the time of your service.
+We currently accept Cash, Cash App, Zelle, or payment through Square.
 </p>
 
 </div>
@@ -387,17 +414,21 @@ No public restrooms available.
 
 <p>
 📸 Instagram:
+
 <a href="https://www.instagram.com/thefacedoctress" target="_blank">
 @TheFaceDoctress
 </a>
+
 </p>
 
 
 <p>
 🎵 TikTok:
+
 <a href="https://www.tiktok.com/@thefacedoctress" target="_blank">
 @TheFaceDoctress
 </a>
+
 </p>
 
 
@@ -451,6 +482,37 @@ I can't wait to provide you with a luxury glam experience.
 
 
 
+
+
+<!-- Mobile Navigation Script -->
+
+<script>
+
+const menuToggle = document.querySelector(".menu-toggle");
+
+const navLinks = document.querySelector(".nav-links");
+
+
+menuToggle.addEventListener("click", () => {
+
+    navLinks.classList.toggle("active");
+
+});
+
+
+/* Close the mobile menu after clicking a link */
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+
+    link.addEventListener("click", () => {
+
+        navLinks.classList.remove("active");
+
+    });
+
+});
+
+</script>
 
 
 </body>
