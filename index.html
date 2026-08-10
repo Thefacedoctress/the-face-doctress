@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -180,9 +179,9 @@ BOOK NOW
         <p>Tuesday – 9AM–6PM</p>
         <p>Wednesday – 9AM–6PM</p>
         <p>Thursday – 9AM–6PM</p>
-        <p>Friday – 9AM–9PM</p>
-        <p>Saturday – 1PM–9PM</p>
-        <p>Sunday – 1PM–9PM</p>
+        <p>Friday – 9AM–6PM</p>
+        <p>Saturday – 1PM–6PM</p>
+        <p>Sunday – 1PM–6PM</p>
 
     </div>
 
@@ -457,3 +456,295 @@ I can't wait to provide you with a luxury glam experience.
 </body>
 
 </html>
+
+
+STYLE
+========================================
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* HTML */
+html {
+    scroll-behavior: smooth;
+}
+
+/* BODY */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #000;
+    color: white;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background: rgba(0,0,0,0.95);
+    padding: 20px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,215,0,0.2);
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    color: gold;
+    font-family: 'Cinzel', serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+
+/* NAV LINKS */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: gold;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #000, #111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+/* HERO CONTENT */
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 420px;
+    max-width: 100%;
+    border-radius: 20px;
+    border: 3px solid gold;
+    box-shadow: 0 0 40px rgba(255,215,0,0.25);
+}
+
+/* HERO TEXT */
+.overlay {
+    max-width: 550px;
+}
+
+.hero h2 {
+    font-size: 60px;
+    color: gold;
+    margin-bottom: 20px;
+    font-family: 'Cinzel', serif;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+    background: gold;
+    color: black;
+    padding: 15px 35px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-2px);
+}
+
+/* SECTIONS */
+section {
+    padding: 90px 20px;
+    text-align: center;
+}
+
+section h2 {
+    color: gold;
+    margin-bottom: 40px;
+    font-size: 42px;
+    font-family: 'Cinzel', serif;
+}
+
+/* BOXES */
+.service-card,
+.hours-box,
+.contact-box,
+.booking-box {
+    max-width: 700px;
+    margin: auto;
+    background: rgba(255,255,255,0.05);
+    padding: 35px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,215,0,0.3);
+}
+
+/* SERVICE */
+.service-card h3 {
+    color: gold;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    color: gold;
+    margin-top: 20px;
+    font-size: 34px;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 2px solid rgba(255,215,0,0.3);
+}
+
+/* POLICY GRID */
+.policy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* POLICY CARDS */
+.policy-card {
+    background: rgba(255,255,255,0.05);
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,215,0,0.3);
+    transition: 0.3s ease;
+}
+
+.policy-card:hover {
+    transform: translateY(-5px);
+    border-color: gold;
+    box-shadow: 0 0 20px rgba(255,215,0,0.15);
+}
+
+.policy-card h3 {
+    color: gold;
+    margin-bottom: 15px;
+    font-family: 'Cinzel', serif;
+}
+
+/* FOOTER */
+footer {
+    background: linear-gradient(to top, #000, #111);
+    padding: 70px 20px 30px;
+    text-align: center;
+    border-top: 1px solid rgba(255,215,0,0.3);
+}
+
+.footer-glam h2 {
+    color: gold;
+    font-size: 42px;
+    font-family: 'Cinzel', serif;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.footer-glam p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 25px;
+}
+
+.footer-glam span {
+    display: inline-block;
+    color: gold;
+    font-size: 26px;
+    font-family: 'Cinzel', serif;
+}
+
+.footer-bottom {
+    margin-top: 40px;
+    opacity: 0.6;
+    font-size: 14px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        flex-direction: column;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 34px;
+    }
+
+    .hero-image img {
+        width: 100%;
+    }
+}
+
+
