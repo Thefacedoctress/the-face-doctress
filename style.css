@@ -1,467 +1,535 @@
-/* RESET */
+/* =========================================================
+THE FACE DOCTRESS
+BLACK / GOLD LUXURY DESIGN
+RESPONSIVE VERSION
+========================================================= */
+
+/* =========================================================
+RESET
+========================================================= */
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
 
-/* HTML */
+/* =========================================================
+HTML
+========================================================= */
+
 html {
-    scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
 
-/* BODY */
+/* =========================================================
+BODY
+========================================================= */
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #000;
-    color: white;
-    line-height: 1.6;
+font-family: 'Poppins', sans-serif;
+background: #000;
+color: white;
+line-height: 1.6;
 }
 
-/* HEADER */
+/* =========================================================
+HEADER
+========================================================= */
+
 header {
-    background: rgba(0,0,0,0.95);
-    padding: 20px 50px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255,215,0,0.2);
+background: rgba(0, 0, 0, 0.95);
+padding: 20px 50px;
+position: sticky;
+top: 0;
+z-index: 1000;
+border-bottom: 1px solid rgba(255, 215, 0, 0.2);
 }
 
-/* NAV */
+/* =========================================================
+NAVIGATION
+========================================================= */
+
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
-/* LOGO */
+/* =========================================================
+LOGO
+========================================================= */
+
 .logo {
-    color: gold;
-    font-family: 'Cinzel', serif;
-    font-size: 28px;
-    letter-spacing: 2px;
+color: gold;
+font-family: 'Cinzel', serif;
+font-size: 28px;
+letter-spacing: 2px;
 }
 
-/* NAV LINKS */
+/* =========================================================
+NAVIGATION LINKS
+========================================================= */
+
 nav ul {
-    display: flex;
-    list-style: none;
-    gap: 25px;
+display: flex;
+list-style: none;
+gap: 25px;
 }
 
 nav a {
-    text-decoration: none;
-    color: white;
-    transition: 0.3s ease;
+text-decoration: none;
+color: white;
+transition: 0.3s ease;
 }
 
 nav a:hover {
-    color: gold;
+color: gold;
 }
 
-/* MOBILE MENU BUTTON */
+/* =========================================================
+MOBILE MENU BUTTON
+========================================================= */
+
 .menu-toggle {
-    display: none;
-    background: transparent;
-    border: none;
-    color: gold;
-    font-size: 30px;
-    cursor: pointer;
-    padding: 5px;
+display: none;
+background: transparent;
+border: none;
+color: gold;
+font-size: 30px;
+cursor: pointer;
+padding: 5px;
 }
 
-/* HERO */
+/* =========================================================
+HERO
+========================================================= */
+
 .hero {
-    min-height: 100vh;
-    background: linear-gradient(to bottom, #000, #111);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 20px;
+min-height: 100vh;
+background: linear-gradient(to bottom, #000, #111);
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 60px 20px;
 }
 
-/* HERO CONTENT */
+/* =========================================================
+HERO CONTENT
+========================================================= */
+
 .hero-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 60px;
-    flex-wrap: wrap;
-    max-width: 1200px;
+display: flex;
+align-items: center;
+justify-content: center;
+gap: 60px;
+flex-wrap: wrap;
+max-width: 1200px;
 }
 
-/* HERO IMAGE */
+/* =========================================================
+HERO IMAGE
+========================================================= */
+
 .hero-image img {
-    width: 420px;
-    max-width: 100%;
-    border-radius: 20px;
-    border: 3px solid gold;
-    box-shadow: 0 0 40px rgba(255,215,0,0.25);
+width: 420px;
+max-width: 100%;
+border-radius: 20px;
+border: 3px solid gold;
+box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
 }
 
-/* HERO TEXT */
+/* =========================================================
+HERO TEXT
+========================================================= */
+
 .overlay {
-    max-width: 550px;
+max-width: 550px;
 }
 
 .hero h2 {
-    font-size: 60px;
-    color: gold;
-    margin-bottom: 20px;
-    font-family: 'Cinzel', serif;
+font-size: 60px;
+color: gold;
+margin-bottom: 20px;
+font-family: 'Cinzel', serif;
 }
 
 .hero p {
-    font-size: 18px;
-    margin-bottom: 30px;
+font-size: 18px;
+margin-bottom: 30px;
 }
 
-/* BUTTON */
+/* =========================================================
+BUTTON
+========================================================= */
+
 .btn {
-    background: gold;
-    color: black;
-    padding: 15px 35px;
-    text-decoration: none;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-    transition: 0.3s ease;
+background: gold;
+color: black;
+padding: 15px 35px;
+text-decoration: none;
+border-radius: 30px;
+font-weight: bold;
+display: inline-block;
+transition: 0.3s ease;
 }
 
 .btn:hover {
-    background: white;
-    transform: translateY(-2px);
+background: white;
+transform: translateY(-2px);
 }
 
-/* SECTIONS */
+/* =========================================================
+SECTIONS
+========================================================= */
+
 section {
-    padding: 90px 20px;
-    text-align: center;
+padding: 90px 20px;
+text-align: center;
 }
 
 section h2 {
-    color: gold;
-    margin-bottom: 40px;
-    font-size: 42px;
-    font-family: 'Cinzel', serif;
+color: gold;
+margin-bottom: 40px;
+font-size: 42px;
+font-family: 'Cinzel', serif;
 }
 
-/* BOXES */
+/* =========================================================
+BOXES
+========================================================= */
+
 .service-card,
 .hours-box,
 .contact-box,
 .booking-box {
-    max-width: 700px;
-    margin: auto;
-    background: rgba(255,255,255,0.05);
-    padding: 35px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,215,0,0.3);
+max-width: 700px;
+margin: auto;
+background: rgba(255, 255, 255, 0.05);
+padding: 35px;
+border-radius: 20px;
+border: 1px solid rgba(255, 215, 0, 0.3);
 }
 
-/* SERVICE */
+/* =========================================================
+SERVICE
+========================================================= */
+
 .service-card h3 {
-    color: gold;
-    font-size: 30px;
-    margin-bottom: 15px;
+color: gold;
+font-size: 30px;
+margin-bottom: 15px;
 }
 
 .service-card h4 {
-    color: gold;
-    margin-top: 20px;
-    font-size: 34px;
+color: gold;
+margin-top: 20px;
+font-size: 34px;
 }
 
-/* GALLERY */
+/* =========================================================
+GALLERY
+========================================================= */
+
 .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    max-width: 1200px;
-    margin: auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 20px;
+max-width: 1200px;
+margin: auto;
 }
 
 .gallery-grid img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 20px;
-    border: 2px solid rgba(255,215,0,0.3);
+width: 100%;
+height: 350px;
+object-fit: cover;
+border-radius: 20px;
+border: 2px solid rgba(255, 215, 0, 0.3);
 }
 
-/* POLICY GRID */
+/* =========================================================
+POLICY GRID
+========================================================= */
+
 .policy-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 25px;
-    max-width: 1200px;
-    margin: auto;
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 25px;
+max-width: 1200px;
+margin: auto;
 }
 
-/* POLICY CARDS */
+/* =========================================================
+POLICY CARDS
+========================================================= */
+
 .policy-card {
-    background: rgba(255,255,255,0.05);
-    padding: 25px;
-    border-radius: 20px;
-    border: 1px solid rgba(255,215,0,0.3);
-    transition: 0.3s ease;
+background: rgba(255, 255, 255, 0.05);
+padding: 25px;
+border-radius: 20px;
+border: 1px solid rgba(255, 215, 0, 0.3);
+transition: 0.3s ease;
 }
 
 .policy-card:hover {
-    transform: translateY(-5px);
-    border-color: gold;
-    box-shadow: 0 0 20px rgba(255,215,0,0.15);
+transform: translateY(-5px);
+border-color: gold;
+box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
 }
 
 .policy-card h3 {
-    color: gold;
-    margin-bottom: 15px;
-    font-family: 'Cinzel', serif;
+color: gold;
+margin-bottom: 15px;
+font-family: 'Cinzel', serif;
 }
 
-/* FOOTER */
+/* =========================================================
+FOOTER
+========================================================= */
+
 footer {
-    background: linear-gradient(to top, #000, #111);
-    padding: 70px 20px 30px;
-    text-align: center;
-    border-top: 1px solid rgba(255,215,0,0.3);
+background: linear-gradient(to top, #000, #111);
+padding: 70px 20px 30px;
+text-align: center;
+border-top: 1px solid rgba(255, 215, 0, 0.3);
 }
 
 .footer-glam h2 {
-    color: gold;
-    font-size: 42px;
-    font-family: 'Cinzel', serif;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+color: gold;
+font-size: 42px;
+font-family: 'Cinzel', serif;
+margin-bottom: 20px;
+letter-spacing: 2px;
 }
 
 .footer-glam p {
-    max-width: 650px;
-    margin: auto;
-    font-size: 17px;
-    line-height: 1.8;
-    opacity: 0.9;
-    margin-bottom: 25px;
+max-width: 650px;
+margin: auto;
+font-size: 17px;
+line-height: 1.8;
+opacity: 0.9;
+margin-bottom: 25px;
 }
 
 .footer-glam span {
-    display: inline-block;
-    color: gold;
-    font-size: 26px;
-    font-family: 'Cinzel', serif;
+display: inline-block;
+color: gold;
+font-size: 26px;
+font-family: 'Cinzel', serif;
 }
 
 .footer-bottom {
-    margin-top: 40px;
-    opacity: 0.6;
-    font-size: 14px;
+margin-top: 40px;
+opacity: 0.6;
+font-size: 14px;
 }
 
-
-/* ================================================= */
-/* MOBILE RESPONSIVE DESIGN */
-/* ================================================= */
+/* =========================================================
+MOBILE RESPONSIVE DESIGN
+========================================================= */
 
 @media (max-width: 768px) {
 
-    /* HEADER */
-    header {
-        padding: 15px 20px;
-    }
-
-    /* NAVIGATION BAR */
-    nav {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-    }
-
-    /* LOGO */
-    .logo {
-        font-size: 20px;
-        letter-spacing: 1px;
-    }
-
-    /* SHOW HAMBURGER BUTTON */
-    .menu-toggle {
-        display: block;
-    }
-
-    /* HIDE MENU BY DEFAULT */
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: rgba(0,0,0,0.98);
-        border-top: 1px solid rgba(255,215,0,0.2);
-        border-bottom: 1px solid rgba(255,215,0,0.2);
-        padding: 10px 0;
-        flex-direction: column;
-        gap: 0;
-        text-align: center;
-    }
-
-    /* SHOW MENU WHEN ACTIVE */
-    nav ul.active {
-        display: flex;
-    }
-
-    /* MOBILE NAV LINKS */
-    nav ul li {
-        width: 100%;
-    }
-
-    nav ul li a {
-        display: block;
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    nav ul li a:hover {
-        background: rgba(255,215,0,0.08);
-        color: gold;
-    }
-
-
-    /* HERO */
-    .hero {
-        min-height: auto;
-        padding: 50px 20px;
-    }
-
-    .hero-content {
-        flex-direction: column;
-        gap: 35px;
-    }
-
-
-    /* HERO IMAGE */
-    .hero-image img {
-        width: 100%;
-        max-width: 380px;
-    }
-
-
-    /* HERO TITLE */
-    .hero h2 {
-        font-size: 38px;
-    }
-
-
-    /* HERO TEXT */
-    .hero p {
-        font-size: 16px;
-    }
-
-
-    /* SECTIONS */
-    section {
-        padding: 70px 20px;
-    }
-
-
-    section h2 {
-        font-size: 34px;
-    }
-
-
-    /* SERVICE BOXES */
-    .service-card,
-    .hours-box,
-    .contact-box,
-    .booking-box {
-        padding: 25px 20px;
-    }
-
-
-    /* SERVICE TITLE */
-    .service-card h3 {
-        font-size: 26px;
-    }
-
-
-    /* GALLERY */
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-
-    .gallery-grid img {
-        height: auto;
-        max-height: 500px;
-    }
-
-
-    /* POLICY GRID */
-    .policy-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-
-    /* POLICY CARDS */
-    .policy-card {
-        padding: 22px 18px;
-    }
-
-
-    /* FOOTER */
-    footer {
-        padding: 60px 20px 25px;
-    }
-
-
-    .footer-glam h2 {
-        font-size: 32px;
-    }
-
-
-    .footer-glam p {
-        font-size: 15px;
-    }
-
-
-    .footer-glam span {
-        font-size: 22px;
-    }
-
-
-    .footer-bottom {
-        font-size: 12px;
-    }
-
+```
+/* HEADER */
+header {
+    padding: 15px 20px;
 }
 
 
-/* ================================================= */
-/* EXTRA SMALL PHONES */
-/* ================================================= */
+/* NAVIGATION BAR */
+nav {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+
+/* LOGO */
+.logo {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+
+/* SHOW HAMBURGER BUTTON */
+.menu-toggle {
+    display: block;
+}
+
+
+/* HIDE MENU BY DEFAULT */
+nav ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.98);
+    border-top: 1px solid rgba(255, 215, 0, 0.2);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.2);
+    padding: 10px 0;
+    flex-direction: column;
+    gap: 0;
+    text-align: center;
+}
+
+
+/* SHOW MENU WHEN ACTIVE */
+nav ul.active {
+    display: flex;
+}
+
+
+/* MOBILE NAV LINKS */
+nav ul li {
+    width: 100%;
+}
+
+nav ul li a {
+    display: block;
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 215, 0, 0.08);
+    color: gold;
+}
+
+
+/* HERO */
+.hero {
+    min-height: auto;
+    padding: 50px 20px;
+}
+
+.hero-content {
+    flex-direction: column;
+    gap: 35px;
+}
+
+
+/* HERO IMAGE */
+.hero-image img {
+    width: 100%;
+    max-width: 380px;
+}
+
+
+/* HERO TITLE */
+.hero h2 {
+    font-size: 38px;
+}
+
+
+/* HERO TEXT */
+.hero p {
+    font-size: 16px;
+}
+
+
+/* SECTIONS */
+section {
+    padding: 70px 20px;
+}
+
+section h2 {
+    font-size: 34px;
+}
+
+
+/* SERVICE BOXES */
+.service-card,
+.hours-box,
+.contact-box,
+.booking-box {
+    padding: 25px 20px;
+}
+
+
+/* SERVICE TITLE */
+.service-card h3 {
+    font-size: 26px;
+}
+
+
+/* GALLERY */
+.gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.gallery-grid img {
+    height: auto;
+    max-height: 500px;
+}
+
+
+/* POLICY GRID */
+.policy-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+
+/* POLICY CARDS */
+.policy-card {
+    padding: 22px 18px;
+}
+
+
+/* FOOTER */
+footer {
+    padding: 60px 20px 25px;
+}
+
+.footer-glam h2 {
+    font-size: 32px;
+}
+
+.footer-glam p {
+    font-size: 15px;
+}
+
+.footer-glam span {
+    font-size: 22px;
+}
+
+.footer-bottom {
+    font-size: 12px;
+}
+```
+
+}
+
+/* =========================================================
+EXTRA SMALL PHONES
+========================================================= */
 
 @media (max-width: 400px) {
 
-    .logo {
-        font-size: 17px;
-    }
+```
+.logo {
+    font-size: 17px;
+}
 
-    .menu-toggle {
-        font-size: 27px;
-    }
+.menu-toggle {
+    font-size: 27px;
+}
 
-    .hero h2 {
-        font-size: 32px;
-    }
+.hero h2 {
+    font-size: 32px;
+}
 
-    section h2 {
-        font-size: 30px;
-    }
+section h2 {
+    font-size: 30px;
+}
 
-    .btn {
-        padding: 13px 28px;
-    }
+.btn {
+    padding: 13px 28px;
+}
+```
 
 }
