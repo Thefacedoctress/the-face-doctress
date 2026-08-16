@@ -122,6 +122,7 @@ header {
     z-index: 1000;
 
     background: rgba(5, 5, 5, 0.88);
+
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
 
@@ -161,57 +162,71 @@ LOGO
 
 .logo {
     text-decoration: none;
+
     font-family: 'Cinzel', serif;
+
     color: var(--cream);
+
     font-size: 21px;
     letter-spacing: 4px;
     font-weight: 500;
 
     display: flex;
     flex-direction: column;
+
     line-height: 1.15;
 }
 
 .logo span {
     color: var(--gold);
+
     font-size: 15px;
     letter-spacing: 7px;
 }
 
 
 /* =========================================================
-NAV LINKS
+NAVIGATION LINKS
 ========================================================= */
 
 nav ul {
     display: flex;
     align-items: center;
+
     gap: 28px;
+
     list-style: none;
 }
 
 nav ul a {
     text-decoration: none;
+
     color: var(--cream);
+
     font-size: 14px;
+
     position: relative;
+
     transition: color 0.3s ease;
 }
 
 nav ul a::after {
     content: "";
+
     position: absolute;
+
     left: 0;
     bottom: -7px;
 
     width: 0;
     height: 1px;
 
-    background: linear-gradient(
-        90deg,
-        var(--gold),
-        var(--blush)
-    );
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold),
+            var(--blush)
+        );
 
     transition: width 0.3s ease;
 }
@@ -233,9 +248,11 @@ MOBILE MENU
     display: none;
 
     border: none;
+
     background: transparent;
 
     color: var(--gold);
+
     font-size: 28px;
 
     cursor: pointer;
@@ -277,12 +294,14 @@ HERO
 
 .hero::before {
     content: "";
+
     position: absolute;
 
     width: 420px;
     height: 420px;
 
     border: 1px solid rgba(232, 180, 184, 0.08);
+
     border-radius: 50%;
 
     top: -180px;
@@ -291,12 +310,17 @@ HERO
 
 .hero-content {
     width: 100%;
+
     max-width: 1250px;
+
     margin: auto;
 
     display: grid;
+
     grid-template-columns: 0.95fr 1.05fr;
+
     align-items: center;
+
     gap: 85px;
 }
 
@@ -313,6 +337,7 @@ HERO IMAGE
     position: relative;
 
     border-radius: 45% 45% 12px 12px;
+
     overflow: hidden;
 
     border: 1px solid var(--border-gold);
@@ -324,7 +349,9 @@ HERO IMAGE
 
 .hero-image-frame::after {
     content: "";
+
     position: absolute;
+
     inset: 0;
 
     background:
@@ -335,29 +362,42 @@ HERO IMAGE
         );
 
     pointer-events: none;
+}
+
+
+/* =========================================================
+IMPORTANT HERO PHOTO FIX
+========================================================= */
+
 .hero-image img {
     width: 100%;
+
     height: 650px;
 
-    object-fit: contain;
-    object-position: center;
+    object-fit: cover;
 
-    background: #050505;
+    /*
+    Keeps the portrait filling the luxury frame
+    while showing more of the upper portion.
+    */
+    object-position: center 20%;
 
     transition: transform 0.9s ease;
 }
 
 .hero-image:hover img {
-    transform: scale(1.035);
+    transform: scale(1.025);
 }
 
 .image-accent {
     display: block;
+
     margin-top: 18px;
 
     text-align: center;
 
     font-size: 10px;
+
     letter-spacing: 4px;
 
     color: var(--gold-soft);
@@ -374,8 +414,11 @@ HERO TEXT
 
 .hero h1 {
     font-family: 'Cinzel', serif;
+
     font-size: clamp(48px, 6vw, 82px);
+
     font-weight: 400;
+
     line-height: 1.04;
 
     color: var(--cream);
@@ -385,11 +428,13 @@ HERO TEXT
 
 .hero h1 em {
     display: block;
+
     font-size: 1.05em;
 }
 
 .hero p {
     color: rgba(255, 249, 245, 0.82);
+
     font-size: 17px;
 
     max-width: 570px;
@@ -401,8 +446,11 @@ HERO TEXT
     margin-top: 35px;
 
     display: flex;
+
     align-items: center;
+
     gap: 28px;
+
     flex-wrap: wrap;
 }
 
@@ -413,18 +461,23 @@ BUTTONS
 
 .btn {
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     padding: 15px 32px;
 
     border-radius: 999px;
+
     border: 1px solid transparent;
 
     text-decoration: none;
 
     font-size: 13px;
+
     letter-spacing: 1.5px;
+
     font-weight: 600;
 
     color: #080808;
@@ -456,11 +509,13 @@ BUTTONS
 
 .text-link {
     text-decoration: none;
+
     color: var(--blush-soft);
 
     font-size: 14px;
 
-    border-bottom: 1px solid rgba(232, 180, 184, 0.4);
+    border-bottom:
+        1px solid rgba(232, 180, 184, 0.4);
 
     padding-bottom: 5px;
 
@@ -471,6 +526,7 @@ BUTTONS
 
 .text-link:hover {
     color: var(--gold);
+
     border-color: var(--gold);
 }
 
@@ -482,8 +538,11 @@ BEAUTY STRIP
 .beauty-strip {
     padding: 22px 20px;
 
-    border-top: 1px solid var(--border-blush);
-    border-bottom: 1px solid var(--border-blush);
+    border-top:
+        1px solid var(--border-blush);
+
+    border-bottom:
+        1px solid var(--border-blush);
 
     background:
         linear-gradient(
@@ -498,21 +557,29 @@ BEAUTY STRIP
 
 .beauty-strip-inner {
     max-width: 1200px;
+
     margin: auto;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
+
     gap: 30px;
+
     flex-wrap: wrap;
 
     font-size: 11px;
+
     letter-spacing: 3px;
+
     color: var(--cream-soft);
 }
 
 .strip-symbol {
     color: var(--blush);
+
     font-size: 19px;
 }
 
@@ -523,13 +590,18 @@ SECTION INTRO
 
 .section-intro {
     max-width: 760px;
+
     margin: 0 auto 65px;
+
     text-align: center;
 }
 
 .section-intro h2 {
     font-family: 'Cinzel', serif;
-    font-size: clamp(38px, 5vw, 58px);
+
+    font-size:
+        clamp(38px, 5vw, 58px);
+
     font-weight: 400;
 
     color: var(--cream);
@@ -540,8 +612,11 @@ SECTION INTRO
 }
 
 .section-intro p {
-    color: rgba(255, 249, 245, 0.68);
+    color:
+        rgba(255, 249, 245, 0.68);
+
     max-width: 610px;
+
     margin: auto;
 }
 
@@ -562,10 +637,13 @@ SERVICES
 
 .services-grid {
     max-width: 1120px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 28px;
 }
@@ -575,7 +653,8 @@ SERVICES
 
     padding: 42px 38px;
 
-    border: 1px solid var(--border-gold);
+    border:
+        1px solid var(--border-gold);
 
     background:
         linear-gradient(
@@ -600,20 +679,25 @@ SERVICES
     position: absolute;
 
     width: 140px;
+
     height: 140px;
 
     border-radius: 50%;
 
-    background: rgba(232, 180, 184, 0.07);
+    background:
+        rgba(232, 180, 184, 0.07);
 
     top: -70px;
+
     right: -70px;
 }
 
 .service-card:hover {
-    transform: translateY(-8px);
+    transform:
+        translateY(-8px);
 
-    border-color: rgba(232, 180, 184, 0.55);
+    border-color:
+        rgba(232, 180, 184, 0.55);
 
     box-shadow:
         0 25px 55px rgba(0, 0, 0, 0.35),
@@ -623,9 +707,11 @@ SERVICES
 .service-number {
     display: block;
 
-    font-family: 'Italiana', serif;
+    font-family:
+        'Italiana', serif;
 
     font-size: 34px;
+
     color: var(--blush);
 
     margin-bottom: 36px;
@@ -633,6 +719,7 @@ SERVICES
 
 .service-label {
     font-size: 10px;
+
     letter-spacing: 2.4px;
 
     color: var(--gold-soft);
@@ -643,7 +730,9 @@ SERVICES
 }
 
 .service-card h3 {
-    font-family: 'Cinzel', serif;
+    font-family:
+        'Cinzel', serif;
+
     font-size: 29px;
 
     font-weight: 400;
@@ -654,7 +743,8 @@ SERVICES
 }
 
 .service-card p {
-    color: rgba(255, 249, 245, 0.72);
+    color:
+        rgba(255, 249, 245, 0.72);
 
     margin-bottom: 13px;
 }
@@ -662,14 +752,17 @@ SERVICES
 .service-price {
     margin-top: 32px;
 
-    font-family: 'Italiana', serif;
+    font-family:
+        'Italiana', serif;
 
     font-size: 42px;
+
     color: var(--gold);
 }
 
 .services-book {
     margin-top: 50px;
+
     text-align: center;
 }
 
@@ -684,10 +777,14 @@ GALLERY
 
 .gallery-grid {
     max-width: 1250px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
     gap: 18px;
 }
 
@@ -705,11 +802,13 @@ GALLERY
 
 .gallery-item:nth-child(2),
 .gallery-item:nth-child(5) {
-    transform: translateY(30px);
+    transform:
+        translateY(30px);
 }
 
 .gallery-item img {
     width: 100%;
+
     height: 100%;
 
     min-height: 430px;
@@ -725,6 +824,7 @@ GALLERY
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     background:
@@ -739,6 +839,7 @@ GALLERY
 
 .gallery-item:hover img {
     transform: scale(1.055);
+
     filter: brightness(1.04);
 }
 
@@ -765,6 +866,7 @@ BEAUTY STATEMENT
 
 .beauty-statement-content {
     max-width: 900px;
+
     margin: auto;
 }
 
@@ -782,6 +884,7 @@ BEAUTY STATEMENT
     text-transform: uppercase;
 
     font-size: 11px;
+
     letter-spacing: 4px;
 
     color: var(--gold-soft);
@@ -790,9 +893,11 @@ BEAUTY STATEMENT
 }
 
 .beauty-statement h2 {
-    font-family: 'Cinzel', serif;
+    font-family:
+        'Cinzel', serif;
 
-    font-size: clamp(40px, 6vw, 70px);
+    font-size:
+        clamp(40px, 6vw, 70px);
 
     font-weight: 400;
 
@@ -810,11 +915,13 @@ HOURS
 
 .hours-box {
     max-width: 760px;
+
     margin: auto;
 
     padding: 15px 38px;
 
-    border: 1px solid var(--border-blush);
+    border:
+        1px solid var(--border-blush);
 
     border-radius: 14px;
 
@@ -828,7 +935,9 @@ HOURS
 
 .hours-row {
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     padding: 19px 0;
@@ -843,6 +952,7 @@ HOURS
 
 .hours-row span:first-child {
     color: var(--cream);
+
     font-weight: 500;
 }
 
@@ -891,9 +1001,11 @@ BOOKING
 }
 
 .booking-box h2 {
-    font-family: 'Cinzel', serif;
+    font-family:
+        'Cinzel', serif;
 
-    font-size: clamp(38px, 5vw, 56px);
+    font-size:
+        clamp(38px, 5vw, 56px);
 
     font-weight: 400;
 
@@ -902,9 +1014,11 @@ BOOKING
 
 .booking-box p {
     max-width: 620px;
+
     margin: 0 auto 16px;
 
-    color: rgba(255, 249, 245, 0.72);
+    color:
+        rgba(255, 249, 245, 0.72);
 }
 
 .booking-lead {
@@ -930,10 +1044,13 @@ POLICIES
 
 .policy-grid {
     max-width: 1180px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 20px;
 }
@@ -945,11 +1062,13 @@ POLICIES
 
     text-align: left;
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border:
+        1px solid rgba(255, 255, 255, 0.08);
 
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.025);
+    background:
+        rgba(255, 255, 255, 0.025);
 
     transition:
         transform 0.35s ease,
@@ -958,11 +1077,14 @@ POLICIES
 }
 
 .policy-card:hover {
-    transform: translateY(-6px);
+    transform:
+        translateY(-6px);
 
-    border-color: rgba(232, 180, 184, 0.38);
+    border-color:
+        rgba(232, 180, 184, 0.38);
 
-    background: rgba(232, 180, 184, 0.035);
+    background:
+        rgba(232, 180, 184, 0.035);
 }
 
 .policy-number {
@@ -971,15 +1093,18 @@ POLICIES
     color: var(--gold);
 
     font-size: 11px;
+
     letter-spacing: 2px;
 
     margin-bottom: 20px;
 }
 
 .policy-card h3 {
-    font-family: 'Cinzel', serif;
+    font-family:
+        'Cinzel', serif;
 
     font-size: 21px;
+
     font-weight: 400;
 
     color: var(--cream);
@@ -988,7 +1113,9 @@ POLICIES
 }
 
 .policy-card p {
-    color: rgba(255, 249, 245, 0.66);
+    color:
+        rgba(255, 249, 245, 0.66);
+
     font-size: 14px;
 
     margin-bottom: 10px;
@@ -1014,10 +1141,13 @@ CONTACT
 
 .contact-box {
     max-width: 950px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+
+    grid-template-columns:
+        repeat(2, 1fr);
 
     gap: 18px;
 }
@@ -1026,17 +1156,20 @@ CONTACT
     text-decoration: none;
 
     display: flex;
+
     align-items: center;
 
     gap: 20px;
 
     padding: 28px;
 
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    border:
+        1px solid rgba(255, 255, 255, 0.07);
 
     border-radius: 12px;
 
-    background: rgba(255, 255, 255, 0.025);
+    background:
+        rgba(255, 255, 255, 0.025);
 
     transition:
         transform 0.35s ease,
@@ -1045,20 +1178,25 @@ CONTACT
 }
 
 .contact-item:hover {
-    transform: translateY(-5px);
+    transform:
+        translateY(-5px);
 
-    border-color: var(--border-blush);
+    border-color:
+        var(--border-blush);
 
-    background: rgba(232, 180, 184, 0.04);
+    background:
+        rgba(232, 180, 184, 0.04);
 }
 
 .contact-icon {
     flex: 0 0 48px;
 
     width: 48px;
+
     height: 48px;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
@@ -1081,6 +1219,7 @@ CONTACT
     color: var(--gold-soft);
 
     font-size: 9px;
+
     letter-spacing: 2.2px;
 
     margin-bottom: 5px;
@@ -1088,7 +1227,9 @@ CONTACT
 
 .contact-item strong {
     color: var(--cream);
+
     font-size: 15px;
+
     font-weight: 500;
 }
 
@@ -1098,11 +1239,13 @@ FOOTER
 ========================================================= */
 
 footer {
-    padding: 100px 24px 30px;
+    padding:
+        100px 24px 30px;
 
     text-align: center;
 
-    border-top: 1px solid var(--border-gold);
+    border-top:
+        1px solid var(--border-gold);
 
     background:
         radial-gradient(
@@ -1115,6 +1258,7 @@ footer {
 
 .footer-glam {
     max-width: 760px;
+
     margin: auto;
 }
 
@@ -1124,15 +1268,18 @@ footer {
     color: var(--gold);
 
     font-size: 10px;
+
     letter-spacing: 4px;
 
     margin-bottom: 20px;
 }
 
 .footer-glam h2 {
-    font-family: 'Cinzel', serif;
+    font-family:
+        'Cinzel', serif;
 
-    font-size: clamp(38px, 5vw, 58px);
+    font-size:
+        clamp(38px, 5vw, 58px);
 
     font-weight: 400;
 
@@ -1140,7 +1287,8 @@ footer {
 }
 
 .footer-glam p {
-    color: rgba(255, 249, 245, 0.7);
+    color:
+        rgba(255, 249, 245, 0.7);
 
     margin: 0 auto 22px;
 
@@ -1150,7 +1298,8 @@ footer {
 .footer-signature {
     display: block;
 
-    font-family: 'Italiana', serif;
+    font-family:
+        'Italiana', serif;
 
     font-size: 28px;
 
@@ -1173,7 +1322,8 @@ footer {
 
     font-size: 12px;
 
-    color: rgba(255, 255, 255, 0.45);
+    color:
+        rgba(255, 255, 255, 0.45);
 }
 
 
@@ -1184,7 +1334,8 @@ SCROLL REVEAL
 .reveal {
     opacity: 0;
 
-    transform: translateY(42px);
+    transform:
+        translateY(42px);
 
     transition:
         opacity 0.85s ease,
@@ -1192,21 +1343,25 @@ SCROLL REVEAL
 }
 
 .reveal-left {
-    transform: translateX(-45px);
+    transform:
+        translateX(-45px);
 }
 
 .reveal-right {
-    transform: translateX(45px);
+    transform:
+        translateX(45px);
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translate(0, 0);
+
+    transform:
+        translate(0, 0);
 }
 
 
 /* =========================================================
-RESPONSIVE
+RESPONSIVE - SMALL DESKTOP
 ========================================================= */
 
 @media (max-width: 1000px) {
@@ -1216,16 +1371,22 @@ RESPONSIVE
     }
 
     .hero-content {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
+
         gap: 45px;
     }
 
     .hero-image img {
         height: 560px;
+
+        object-position:
+            center 20%;
     }
 
     .policy-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 }
 
@@ -1239,9 +1400,14 @@ TABLET / MOBILE
     /* HEADER */
 
     nav {
-        padding: 16px 20px;
+        padding:
+            16px 20px;
+
         position: relative;
     }
+
+
+    /* LOGO */
 
     .logo {
         font-size: 18px;
@@ -1249,16 +1415,21 @@ TABLET / MOBILE
 
     .logo span {
         font-size: 12px;
+
         letter-spacing: 5px;
     }
 
+
+    /* HAMBURGER */
+
     .menu-toggle {
         display: block;
+
         z-index: 1001;
     }
 
 
-    /* MOBILE NAV */
+    /* MOBILE NAVIGATION */
 
     nav ul {
         display: none;
@@ -1266,13 +1437,16 @@ TABLET / MOBILE
         position: absolute;
 
         top: 100%;
+
         left: 0;
 
         width: 100%;
 
-        padding: 10px 0 18px;
+        padding:
+            10px 0 18px;
 
         flex-direction: column;
+
         gap: 0;
 
         text-align: center;
@@ -1298,7 +1472,8 @@ TABLET / MOBILE
     nav ul a {
         display: block;
 
-        padding: 13px 20px;
+        padding:
+            13px 20px;
 
         font-size: 15px;
     }
@@ -1316,25 +1491,36 @@ TABLET / MOBILE
 
     .hero-content {
         grid-template-columns: 1fr;
+
         gap: 55px;
     }
 
     .hero-image {
         max-width: 520px;
+
+        width: 100%;
+
         margin: auto;
     }
 
     .hero-image img {
         height: 580px;
+
+        object-fit: cover;
+
+        object-position:
+            center 20%;
     }
 
     .overlay {
         text-align: center;
+
         margin: auto;
     }
 
     .hero p {
         margin-left: auto;
+
         margin-right: auto;
     }
 
@@ -1353,7 +1539,8 @@ TABLET / MOBILE
     /* GALLERY */
 
     .gallery-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
     .gallery-item:nth-child(2),
@@ -1362,10 +1549,11 @@ TABLET / MOBILE
     }
 
 
-    /* POLICY */
+    /* POLICIES */
 
     .policy-grid {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            1fr 1fr;
     }
 
 
@@ -1384,7 +1572,8 @@ MOBILE
 @media (max-width: 600px) {
 
     .section-space {
-        padding: 85px 18px;
+        padding:
+            85px 18px;
     }
 
 
@@ -1392,30 +1581,43 @@ MOBILE
 
     .hero {
         padding:
-            45px 18px
-            80px;
+            45px 18px 80px;
     }
 
     .hero h1 {
         font-size: 48px;
     }
 
+    .hero-image {
+        width: 100%;
+
+        max-width: 430px;
+    }
+
     .hero-image img {
         height: 470px;
+
+        object-fit: cover;
+
+        object-position:
+            center 20%;
     }
 
     .image-accent {
         font-size: 8px;
+
         letter-spacing: 2.5px;
     }
 
     .hero-actions {
         flex-direction: column;
+
         gap: 18px;
     }
 
     .btn {
         width: 100%;
+
         max-width: 320px;
     }
 
@@ -1441,7 +1643,8 @@ MOBILE
     /* SERVICES */
 
     .service-card {
-        padding: 32px 24px;
+        padding:
+            32px 24px;
     }
 
     .service-card h3 {
@@ -1464,11 +1667,14 @@ MOBILE
     /* HOURS */
 
     .hours-box {
-        padding: 10px 20px;
+        padding:
+            10px 20px;
     }
 
     .hours-row {
-        padding: 17px 0;
+        padding:
+            17px 0;
+
         font-size: 14px;
     }
 
@@ -1476,11 +1682,12 @@ MOBILE
     /* BOOKING */
 
     .booking-box {
-        padding: 50px 24px;
+        padding:
+            50px 24px;
     }
 
 
-    /* POLICY */
+    /* POLICIES */
 
     .policy-grid {
         grid-template-columns: 1fr;
@@ -1490,14 +1697,16 @@ MOBILE
     /* CONTACT */
 
     .contact-item {
-        padding: 23px 20px;
+        padding:
+            23px 20px;
     }
 
 
     /* FOOTER */
 
     footer {
-        padding: 80px 18px 28px;
+        padding:
+            80px 18px 28px;
     }
 
     .footer-signature {
@@ -1514,11 +1723,13 @@ EXTRA SMALL MOBILE
 
     .logo {
         font-size: 16px;
+
         letter-spacing: 2px;
     }
 
     .logo span {
         font-size: 10px;
+
         letter-spacing: 4px;
     }
 
@@ -1532,6 +1743,11 @@ EXTRA SMALL MOBILE
 
     .hero-image img {
         height: 420px;
+
+        object-fit: cover;
+
+        object-position:
+            center 20%;
     }
 
     .hours-row {
@@ -1540,7 +1756,9 @@ EXTRA SMALL MOBILE
 
     .contact-icon {
         flex-basis: 42px;
+
         width: 42px;
+
         height: 42px;
     }
 
@@ -1563,15 +1781,21 @@ ACCESSIBILITY
     *,
     *::before,
     *::after {
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
+        transition-duration:
+            0.01ms !important;
+
+        animation-duration:
+            0.01ms !important;
+
+        animation-iteration-count:
+            1 !important;
     }
 
     .reveal,
     .reveal-left,
     .reveal-right {
         opacity: 1;
+
         transform: none;
     }
 }
