@@ -162,11 +162,8 @@ LOGO
 
 .logo {
     text-decoration: none;
-
     font-family: 'Cinzel', serif;
-
     color: var(--cream);
-
     font-size: 21px;
     letter-spacing: 4px;
     font-weight: 500;
@@ -179,7 +176,6 @@ LOGO
 
 .logo span {
     color: var(--gold);
-
     font-size: 15px;
     letter-spacing: 7px;
 }
@@ -192,41 +188,32 @@ NAVIGATION LINKS
 nav ul {
     display: flex;
     align-items: center;
-
     gap: 28px;
-
     list-style: none;
 }
 
 nav ul a {
     text-decoration: none;
-
     color: var(--cream);
-
     font-size: 14px;
-
     position: relative;
-
     transition: color 0.3s ease;
 }
 
 nav ul a::after {
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: -7px;
 
     width: 0;
     height: 1px;
 
-    background:
-        linear-gradient(
-            90deg,
-            var(--gold),
-            var(--blush)
-        );
+    background: linear-gradient(
+        90deg,
+        var(--gold),
+        var(--blush)
+    );
 
     transition: width 0.3s ease;
 }
@@ -246,15 +233,10 @@ MOBILE MENU
 
 .menu-toggle {
     display: none;
-
     border: none;
-
     background: transparent;
-
     color: var(--gold);
-
     font-size: 28px;
-
     cursor: pointer;
 }
 
@@ -310,9 +292,7 @@ HERO
 
 .hero-content {
     width: 100%;
-
     max-width: 1250px;
-
     margin: auto;
 
     display: grid;
@@ -366,21 +346,19 @@ HERO IMAGE
 
 
 /* =========================================================
-IMPORTANT HERO PHOTO FIX
+HERO PHOTO FIX
 ========================================================= */
 
 .hero-image img {
     width: 100%;
 
-    height: 650px;
+    height: auto;
+
+    aspect-ratio: 4 / 5;
 
     object-fit: cover;
 
-    /*
-    Keeps the portrait filling the luxury frame
-    while showing more of the upper portion.
-    */
-    object-position: center 20%;
+    object-position: center top;
 
     transition: transform 0.9s ease;
 }
@@ -428,7 +406,6 @@ HERO TEXT
 
 .hero h1 em {
     display: block;
-
     font-size: 1.05em;
 }
 
@@ -1378,10 +1355,12 @@ RESPONSIVE - SMALL DESKTOP
     }
 
     .hero-image img {
-        height: 560px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
 
-        object-position:
-            center 20%;
+        object-fit: cover;
+        object-position: center top;
     }
 
     .policy-grid {
@@ -1504,12 +1483,12 @@ TABLET / MOBILE
     }
 
     .hero-image img {
-        height: 580px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
 
         object-fit: cover;
-
-        object-position:
-            center 20%;
+        object-position: center top;
     }
 
     .overlay {
@@ -1595,12 +1574,12 @@ MOBILE
     }
 
     .hero-image img {
-        height: 470px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
 
         object-fit: cover;
-
-        object-position:
-            center 20%;
+        object-position: center top;
     }
 
     .image-accent {
@@ -1742,12 +1721,12 @@ EXTRA SMALL MOBILE
     }
 
     .hero-image img {
-        height: 420px;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 5;
 
         object-fit: cover;
-
-        object-position:
-            center 20%;
+        object-position: center top;
     }
 
     .hours-row {
