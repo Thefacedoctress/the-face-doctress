@@ -1778,3 +1778,108 @@ ACCESSIBILITY
         transform: none;
     }
 }
+
+/* =========================================================
+   SUMMER SPECIAL BANNER
+========================================================= */
+
+.summer-special {
+    width: 100%;
+    background: linear-gradient(
+        90deg,
+        #f7d6df,
+        #f3b6c8,
+        #f7d6df
+    );
+    color: #4a2431;
+
+    position: relative;
+    overflow: hidden;
+
+    min-height: 46px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+    z-index: 2000;
+}
+
+.summer-special-track {
+    display: flex;
+    width: max-content;
+
+    animation: summerScroll 18s linear infinite;
+}
+
+.summer-special-track span {
+    white-space: nowrap;
+
+    padding-right: 70px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+}
+
+.summer-special-close {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.85);
+    color: #4a2431;
+
+    font-size: 22px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.summer-special-close:hover {
+    background: white;
+}
+
+@keyframes summerScroll {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+
+    .summer-special {
+        min-height: 42px;
+    }
+
+    .summer-special-track span {
+        font-size: 12px;
+        padding-right: 45px;
+    }
+
+    .summer-special-close {
+        right: 7px;
+        width: 27px;
+        height: 27px;
+        font-size: 19px;
+    }
+}
