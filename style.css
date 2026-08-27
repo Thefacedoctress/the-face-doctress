@@ -1891,12 +1891,11 @@ ACCESSIBILITY
     background:
         radial-gradient(
             circle at top right,
-            rgba(201, 169, 110, 0.08),
+            rgba(212, 175, 55, 0.06),
             transparent 30%
         ),
-        #fffaf7;
+        var(--black);
 }
-
 
 /* =========================================================
    REVIEWS LAYOUT
