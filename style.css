@@ -1883,3 +1883,376 @@ ACCESSIBILITY
         font-size: 19px;
     }
 }
+/* =========================================================
+   REVIEWS
+========================================================= */
+
+.reviews {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(201, 169, 110, 0.08),
+            transparent 30%
+        ),
+        #fffaf7;
+}
+
+
+/* =========================================================
+   REVIEWS LAYOUT
+========================================================= */
+
+.reviews-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+
+    width: min(1180px, 92%);
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   REVIEWS LIST
+========================================================= */
+
+.reviews-container {
+    display: grid;
+    gap: 18px;
+}
+
+
+.review-card {
+    position: relative;
+
+    padding: 28px 26px;
+
+    background: #ffffff;
+
+    border: 1px solid #eadfda;
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 32px rgba(51, 36, 31, 0.06);
+
+    overflow: hidden;
+}
+
+
+.review-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #b9965a,
+            #dbc38f
+        );
+}
+
+
+/* =========================================================
+   REVIEW STARS
+========================================================= */
+
+.review-stars {
+    margin-bottom: 16px;
+
+    color: #b9965a;
+
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+}
+
+
+/* =========================================================
+   REVIEW TEXT
+========================================================= */
+
+.review-text {
+    margin: 0 0 20px;
+
+    color: #5f514c;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.92rem;
+    line-height: 1.8;
+}
+
+
+/* =========================================================
+   REVIEW META
+========================================================= */
+
+.review-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+
+.review-meta strong {
+    color: #2f2522;
+
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
+.review-meta span {
+    color: #9b7b4f;
+
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+
+.review-meta small {
+    color: #9a8f89;
+
+    font-size: 0.72rem;
+}
+
+
+/* =========================================================
+   REVIEW PLACEHOLDER
+========================================================= */
+
+.review-placeholder {
+    padding: 36px 28px;
+
+    background: #ffffff;
+
+    border: 1px dashed #d9c7bc;
+    border-radius: 16px;
+
+    text-align: center;
+}
+
+
+.review-placeholder p {
+    margin: 0;
+
+    color: #8a7a73;
+
+    font-size: 0.88rem;
+}
+
+
+/* =========================================================
+   REVIEW FORM CARD
+========================================================= */
+
+.review-form-card {
+    position: sticky;
+    top: 110px;
+
+    padding: 34px 30px;
+
+    background: #ffffff;
+
+    border: 1px solid #eadfda;
+    border-radius: 18px;
+
+    box-shadow:
+        0 16px 38px rgba(51, 36, 31, 0.08);
+}
+
+
+.review-form-card h3 {
+    margin-bottom: 10px;
+
+    color: #2f2522;
+
+    font-family: "Cinzel", serif;
+
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+
+.review-form-card > p {
+    margin-bottom: 24px;
+
+    color: #756761;
+
+    font-size: 0.88rem;
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   REVIEW FORM FIELDS
+========================================================= */
+
+.review-form-card .form-group {
+    margin-bottom: 18px;
+}
+
+
+.review-form-card label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #4a3c37;
+
+    font-size: 0.78rem;
+    font-weight: 600;
+
+    letter-spacing: 0.04em;
+}
+
+
+.review-form-card input,
+.review-form-card select,
+.review-form-card textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background: #fffdfb;
+
+    border: 1px solid #dccfc8;
+    border-radius: 9px;
+
+    color: #3d322e;
+
+    font-family: "Poppins", sans-serif;
+
+    font-size: 0.88rem;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.review-form-card textarea {
+    resize: vertical;
+}
+
+
+.review-form-card input:focus,
+.review-form-card select:focus,
+.review-form-card textarea:focus {
+    border-color: #b9965a;
+
+    box-shadow:
+        0 0 0 3px rgba(185, 150, 90, 0.12);
+}
+
+
+/* =========================================================
+   REVIEW SUBMIT BUTTON
+========================================================= */
+
+.review-form-card .btn {
+    width: 100%;
+
+    margin-top: 4px;
+
+    justify-content: center;
+}
+
+
+.review-form-card .btn:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   REVIEW SUCCESS MESSAGE
+========================================================= */
+
+.review-success {
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+
+    padding: 12px 14px;
+
+    background: #f8f1e5;
+
+    border: 1px solid #dec89e;
+    border-radius: 8px;
+
+    color: #7d6032 !important;
+
+    text-align: center;
+
+    font-size: 0.82rem !important;
+    font-weight: 500;
+}
+
+
+/* =========================================================
+   REVIEWS — TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .reviews-layout {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        width: 100%;
+        padding: 0 20px;
+    }
+
+
+    .review-form-card {
+        position: static;
+
+        top: auto;
+    }
+
+}
+
+
+/* =========================================================
+   REVIEWS — SMALL PHONES
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .reviews-layout {
+        padding: 0 16px;
+    }
+
+
+    .review-card {
+        padding: 24px 20px;
+    }
+
+
+    .review-form-card {
+        padding: 26px 20px;
+
+        border-radius: 14px;
+    }
+
+
+    .review-form-card h3 {
+        font-size: 1.4rem;
+    }
+
+
+    .review-text {
+        font-size: 0.86rem;
+    }
+
+}
