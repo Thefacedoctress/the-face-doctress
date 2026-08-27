@@ -1475,6 +1475,14 @@ const SUPABASE_KEY =
 
 
 /* =========================================================
+   REVIEW DISPLAY SETTINGS
+========================================================= */
+
+let allPublishedReviews = [];
+let visibleReviewCount = 4;
+
+
+/* =========================================================
    LOAD PUBLISHED REVIEWS
 ========================================================= */
 
@@ -1482,6 +1490,10 @@ async function loadReviews() {
 
     const reviewsContainer =
         document.getElementById("reviewsContainer");
+
+    const loadMoreButton =
+        document.getElementById("loadMoreReviews");
+
 
     if (!reviewsContainer) {
         return;
@@ -1506,10 +1518,16 @@ async function loadReviews() {
         }
 
 
-        const reviews = await response.json();
+        allPublishedReviews =
+            await response.json();
 
 
-        if (reviews.length === 0) {
+        visibleReviewCount = 4;
+
+
+        /* NO REVIEWS */
+
+        if (allPublishedReviews.length === 0) {
 
             reviewsContainer.innerHTML = `
                 <div class="review-placeholder">
@@ -1519,67 +1537,19 @@ async function loadReviews() {
                 </div>
             `;
 
+
+            if (loadMoreButton) {
+                loadMoreButton.hidden = true;
+            }
+
+
             return;
         }
 
 
-        reviewsContainer.innerHTML = "";
+        /* SHOW REVIEWS */
 
-
-        reviews.forEach(function (review) {
-
-            const reviewCard =
-                document.createElement("article");
-
-            reviewCard.className = "review-card";
-
-
-            const stars =
-                "★".repeat(review.rating) +
-                "☆".repeat(5 - review.rating);
-
-
-            const reviewDate =
-                new Date(review.created_at)
-                    .toLocaleDateString(
-                        "en-US",
-                        {
-                            month: "long",
-                            year: "numeric"
-                        }
-                    );
-
-
-            reviewCard.innerHTML = `
-                <div class="review-stars">
-                    ${stars}
-                </div>
-
-                <p class="review-text">
-                    “${escapeHtml(review.review_text)}”
-                </p>
-
-                <div class="review-meta">
-
-                    <strong>
-                        ${escapeHtml(review.customer_name)}
-                    </strong>
-
-                    <span>
-                        ${escapeHtml(review.service)}
-                    </span>
-
-                    <small>
-                        ${reviewDate}
-                    </small>
-
-                </div>
-            `;
-
-
-            reviewsContainer.appendChild(reviewCard);
-
-        });
+        renderReviews();
 
 
     } catch (error) {
@@ -1593,6 +1563,156 @@ async function loadReviews() {
 
 }
 
+
+/* =========================================================
+   RENDER REVIEWS
+========================================================= */
+
+function renderReviews() {
+
+    const reviewsContainer =
+        document.getElementById("reviewsContainer");
+
+    const loadMoreButton =
+        document.getElementById("loadMoreReviews");
+
+
+    if (!reviewsContainer) {
+        return;
+    }
+
+
+    reviewsContainer.innerHTML = "";
+
+
+    /* SHOW ONLY 4 AT FIRST */
+
+    const reviewsToShow =
+        allPublishedReviews.slice(
+            0,
+            visibleReviewCount
+        );
+
+
+    reviewsToShow.forEach(function (review) {
+
+        const reviewCard =
+            document.createElement("article");
+
+
+        reviewCard.className =
+            "review-card";
+
+
+        /* STARS */
+
+        const stars =
+            "★".repeat(review.rating) +
+            "☆".repeat(5 - review.rating);
+
+
+        /* DATE */
+
+        const reviewDate =
+            new Date(review.created_at)
+                .toLocaleDateString(
+                    "en-US",
+                    {
+                        month: "long",
+                        year: "numeric"
+                    }
+                );
+
+
+        /* REVIEW CARD */
+
+        reviewCard.innerHTML = `
+            <div class="review-stars">
+                ${stars}
+            </div>
+
+            <p class="review-text">
+                “${escapeHtml(review.review_text)}”
+            </p>
+
+            <div class="review-meta">
+
+                <strong>
+                    ${escapeHtml(review.customer_name)}
+                </strong>
+
+                <span>
+                    ${escapeHtml(review.service)}
+                </span>
+
+                <small>
+                    ${reviewDate}
+                </small>
+
+            </div>
+        `;
+
+
+        reviewsContainer.appendChild(
+            reviewCard
+        );
+
+    });
+
+
+    /* =====================================================
+       VIEW MORE BUTTON
+    ===================================================== */
+
+    if (loadMoreButton) {
+
+        if (
+            visibleReviewCount <
+            allPublishedReviews.length
+        ) {
+
+            loadMoreButton.hidden = false;
+
+        } else {
+
+            loadMoreButton.hidden = true;
+
+        }
+
+    }
+
+}
+
+
+/* =========================================================
+   VIEW MORE REVIEWS
+========================================================= */
+
+const loadMoreReviewsButton =
+    document.getElementById(
+        "loadMoreReviews"
+    );
+
+
+if (loadMoreReviewsButton) {
+
+    loadMoreReviewsButton.addEventListener(
+        "click",
+        function () {
+
+            /* SHOW 4 MORE */
+
+            visibleReviewCount += 4;
+
+
+            /* REDRAW REVIEWS */
+
+            renderReviews();
+
+        }
+    );
+
+}
 
 /* =========================================================
    SUBMIT REVIEW
