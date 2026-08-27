@@ -2255,3 +2255,25 @@ ACCESSIBILITY
     }
 
 }
+/* =========================================================
+   VIEW MORE REVIEWS BUTTON
+========================================================= */
+
+.reviews-more {
+    margin-top: 24px;
+    text-align: center;
+}
+
+.reviews-more-btn {
+    min-width: 220px;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+
+    .reviews-more-btn {
+        width: 100%;
+        max-width: 320px;
+    }
+
+}
