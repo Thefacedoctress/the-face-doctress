@@ -1637,10 +1637,17 @@ MOBILE
         grid-template-columns: 1fr;
     }
 
-    .gallery-item,
-    .gallery-item img {
-        min-height: 480px;
-    }
+   .gallery-item {
+    min-height: 0;
+    height: auto;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    object-fit: contain;
+}
 
 
     /* HOURS */
