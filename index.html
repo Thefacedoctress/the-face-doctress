@@ -1449,19 +1449,29 @@
     );
 /* =========================================================
    SUMMER SPECIAL BANNER
+   Automatically hides after September 22
 ========================================================= */
 
 const summerSpecial = document.getElementById("summerSpecial");
 const summerSpecialClose = document.getElementById("summerSpecialClose");
 
-if (summerSpecial && summerSpecialClose) {
+if (summerSpecial) {
 
-    summerSpecialClose.addEventListener("click", function () {
+    // Summer Special ends September 22, 2026
+    const summerEndDate = new Date("2026-09-23T00:00:00");
+
+    // Hide automatically once September 23 begins
+    if (new Date() >= summerEndDate) {
         summerSpecial.style.display = "none";
-    });
+    }
 
+    // Allow visitor to close it manually
+    if (summerSpecialClose) {
+        summerSpecialClose.addEventListener("click", function () {
+            summerSpecial.style.display = "none";
+        });
+    }
 }
-
     /* =========================================================
    SUPABASE REVIEW SYSTEM
 ========================================================= */
